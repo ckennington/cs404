@@ -1,0 +1,19 @@
+table {
+  margin: 20 20;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table tr td {
+  border: 1px solid black;
+}
+
+table td {
+  padding: 5 10;
+  font-family: Helvetica;
+  font-size: 20px;
+}
+
+input[type=submit] {
+  margin-left: 20px;
+}

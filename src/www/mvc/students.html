@@ -1,0 +1,23 @@
+<?php
+require_once "Views/Students/Html.php";
+require_once "Models/Students.php";
+
+$model = new Models_Students();
+$view = new Views_Students_Html($model);
+?>
+
+
+<html>
+  <head>
+    <title>Student List</title>
+    <link rel="stylesheet" href="resources/style.css">
+  </head>
+  <body>
+    <?php echo $view->output(); ?>
+    <form method="POST" action="save.php">
+      <input type="submit" name="add" value="Add"/>
+      <input type="text" name="name"/>
+    </form>
+  </body>
+</html>
+
