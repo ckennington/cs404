@@ -1,9 +1,0 @@
-<?php
-require_once "Views/Students/Xml.php";
-require_once "Models/Students.php";
-
-$model = new Models_Students();
-$view = new Views_Students_Xml($model);
-
-header("Content-Type: text/xml");
-echo $view->output();

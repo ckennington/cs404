@@ -4,11 +4,11 @@ class Views_Students_Xml {
 
   private $model;
 
-  public function __construct ($model) {
+  public function setModel ($model) {
     $this->model = $model;
   }
 
-  public function output () {
+  public function render () {
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
     $xml .= '<students>';
     foreach ($this->model->getStudents() as $student) {
@@ -17,7 +17,7 @@ class Views_Students_Xml {
       }
     }
     $xml .= '</students>';
-    return $xml;
+    include_once("Templates/xml.php");
   }
 }
 
