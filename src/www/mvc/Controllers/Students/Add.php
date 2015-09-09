@@ -3,7 +3,12 @@
 class Controllers_Students_Add {
 
   private $model;
-  private $redirect = "/mvc/students/list.html";
+  private $redirect;
+
+  public function setRedirect ($redirect) {
+    $this->redirect = $redirect;
+
+  }
 
   public function setModel ($model) {
     $this->model = $model;

@@ -1,21 +1,21 @@
 {
-  "/mvc/students/list.html": [
-    { "model": "Models/Students.php" },
-    { "view": "Views/Students/Html.php" },
-    { "controller": "Controllers/Students.php" }
-  ],
-  "/mvc/students/list.xml": [
-    { "model": "Models/Students.php" },
-    { "view": "Views/Students/Xml.php" },
-    { "controller": "Controllers/Students.php" }
-  ],
-  "/mvc/students/list.json": [
-    { "model": "Models/Students.php" },
-    { "view": "Views/Students/Json.php" },
-    { "controller": "Controllers/Students.php" }
-  ],
-  "/mvc/students/add.post": [
-    { "model": "Models/Students.php" },
-    { "controller": "Controllers/Students/Add.php" }
-  ]
+  "/mvc/students/list.html": {
+    "model": "~ModelStudentList",
+    "view": "~ViewStudentListHtml",
+    "controller": "~ControllerStudentList"
+  },
+  "/mvc/students/list.xml": {
+    "model": "~ModelStudentList",
+    "view": "~ViewStudentListXml",
+    "controller": "~ControllerStudentList"
+  },
+  "/mvc/students/list.json": {
+    "model": "~ModelStudentList",
+    "view": "~ViewStudentListJson",
+    "controller": "~ControllerStudentList"
+  },
+  "/mvc/students/add.post": {
+    "model": "~ModelStudentList",
+    "controller": "~ControllerStudentAdd"
+  }
 }
