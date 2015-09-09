@@ -1,0 +1,39 @@
+{
+  "~ModelStudentList" : {
+    "file" : "Models/Students.php",
+    "class" : "Models_Students"
+   },
+   "~ViewStudentListHtml": {
+     "file" : "Views/Students/Html.php",
+     "class" : "Views_Students_Html",
+     "params" : {
+       "model" : "~ModelStudentList"
+     }
+   },
+   "~ViewStudentListXml" : {
+     "file" : "Views/Students/Xml.php",
+     "class" : "Views_Students_Xml",
+     "params" : {
+       "model" : "~ModelStudentList"
+     }
+   },
+   "~ViewStudentListJson" : {
+     "file" : "Views/Students/Json.php",
+     "class" : "Views_Students_Json",
+     "params" : {
+       "model" : "~ModelStudentList"
+     }
+   },
+   "~ControllerStudentList" : {
+     "file" : "Controllers/Students.php",
+     "class" : "Controllers_Students"
+   },
+   "~ControllerStudentAdd" : {
+     "file" : "Controllers/Students/Add.php",
+     "class" : "Controllers_Students_Add",
+     "params" : {
+       "redirect" : "/mvc/students/list.html",
+       "model" : "~ModelStudentList"
+     }
+   }
+}
