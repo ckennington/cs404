@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>React Examples</title>
+    <script src='../lib/js/react.js'></script>
+    <script src='../lib/js/JSXTransformer.js'></script>
+  </head>
+  <body>
+    <div id='app'></div>
+    <script type='text/jsx'>
+
+      var Greeting = React.createClass({
+        render: function() {
+          return <h1>Hello World</h1>;
+        }
+      });
+
+      React.render(<Greeting />, document.getElementById('app'));
+    </script>
+  </body>
+</html>

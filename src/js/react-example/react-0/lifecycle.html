@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>React Examples</title>
+    <script src='../lib/js/react.js'></script>
+    <script src='../lib/js/JSXTransformer.js'></script>
+  </head>
+  <body>
+    <div id='app'></div>
+    <script type='text/jsx'>
+
+      var Counter = React.createClass({
+        getInitialState: function() {
+          return { value:0 };
+        },
+        render: function() {
+          return (
+            <div>Name: {this.props.name}<br />
+                 Value: {this.state.value}</div>
+          );
+        },
+
+        // common ones
+        componentDidMount: function() {
+          console.log('componentDidMount');
+        },
+        componentWillReceiveProps: function(props) {
+          console.log('componentWillReceiveProps', props);
+        },
+
+        // more lifecycle hooks
+        componentWillMount: function() {
+          console.log('componentWillMount');
+        },
+        componentWillUnmount: function() {
+          console.log('componentWillUnmount');
+        },
+        componentShouldUpdate: function(props, state) {
+          // wrong name
+          console.log('componentShouldUpdate', props, state);
+        },
+        componentWillUpdate: function(props, state) {
+          console.log('componentWillUpdate', props, state);
+        },
+        componentDidUpdate: function(props, state) {
+          console.log('componentDidUpdate', props, state);
+        }
+
+      });
+
+      React.render(<Counter name='green'/>, document.getElementById('app'));
+    </script>
+  </body>
+</html>

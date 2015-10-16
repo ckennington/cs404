@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>React Examples</title>
+    <script src='../lib/js/react.js'></script>
+    <script src='../lib/js/JSXTransformer.js'></script>
+  </head>
+  <body>
+    <div id='app'></div>
+    <script type='text/jsx'>
+
+      var Greeting = React.createClass({
+        propTypes: {
+          name: React.PropTypes.string,
+          age: React.PropTypes.number
+        },
+        getDefaultProps: function () {
+          return { likes:[] };
+        },
+        render: function() {
+          return (
+            <div>
+              <h1>{this.props.name}</h1>
+              <small>age {this.props.age}</small>
+              <Hobbies likes={this.props.likes} />
+            </div>
+          );
+        }
+      });
+
+      var Hobbies = React.createClass({
+        propTypes: {
+          likes: React.PropTypes.array
+        },
+        render: function() {
+          return (
+            <div> likes include:
+              <ul>
+                {this.props.likes.map(function (like) {
+                  return <li>{like}</li>;
+                })}
+              </ul>
+            </div>
+          );
+        }
+
+      });
+
+      React.render(
+        <Greeting  />,
+        document.getElementById('app')
+      );
+    </script>
+  </body>
+</html>

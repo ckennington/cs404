@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>React Examples</title>
+    <script src='../lib/js/react.js'></script>
+    <script src='../lib/js/JSXTransformer.js'></script>
+  </head>
+  <body>
+    <div id='app'></div>
+    <script type='text/jsx'>
+
+      var TodoApp = React.createClass({
+        getInitialState: function () {
+          return { todos:[], input:'' };
+        },
+        onChange: function (e) {
+          this.setState({ input:e.target.value });
+        },
+        onSubmit: function (e) {
+          e.preventDefault();
+          this.setState({
+            todos: this.state.todos.concat([this.state.input]),
+            input: ''
+          });
+        },
+        render: function() {
+          return (
+            <form onSubmit={this.onSubmit}>
+              <input onChange={this.onChange} value={this.state.input} />
+            </form>
+          );
+        }
+      });
+
+      React.render(<TodoApp />, document.getElementById('app'));
+    </script>
+  </body>
+</html>

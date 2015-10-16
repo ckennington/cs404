@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Events -- Number Game Example</title>
+    <link href='../lib/css/bootstrap.min.css' rel='stylesheet' />
+  </head>
+  <body>
+    <br />
+    <br />
+    <div class='center-block' style='width:500px'>
+      <div class='panel panel-primary'>
+
+        <!-- menu -->
+        <div class='panel-heading'>
+          Number Guessing Game
+        </div>
+
+        <!-- input area -->
+        <div class='panel-body'>
+          <table class='table table-condensed'>
+            <thead>
+              <tr>
+                <th id='th-correct'>correct</th>
+                <th id='th-misplaced'>misplaced</th>
+                <th id='th-wrong'>wrong</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td id='correct' class='text-success'>0</td>
+              <td id='misplaced' class='text-warning'>0</td>
+              <td id='wrong' class='text-danger'>0</td>
+            </tr>
+            </tbody>
+          </table>
+          <form id='form' class='input-group input-group-lg'>
+            <span class='input-group-addon'>
+              <span class='glyphicon glyphicon-console'></span>
+            </span>
+            <input id='input' type='number' class='form-control'
+              placeholder='guess a 4-digit number' />
+            <span class='input-group-btn'>
+              <button class='btn btn-default' type='submit'>
+                Guess
+              </button>
+            </span>
+          </form>
+          <br />
+        </div>
+
+        <!-- score board -->
+        <div class='panel-footer'>
+          <div class='text-right'>
+            <button id='new-game' class='btn btn-primary '>
+              new game
+            </button>
+          </div>
+        </div>
+
+    </div>
+    <script src='../lib/js/jquery.min.js'></script>
+    <script src='../lib/js/bootstrap.min.js'></script>
+    <script src='game-engine.js'></script>
+    <script src='events.js'></script>
+  </body>
+</html>
